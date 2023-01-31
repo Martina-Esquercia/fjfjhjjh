@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;}
+
+    ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px;
+    }
+
+
+a{ text-decoration: none;
+    color: black;
+}
+
+nav{
+    padding: 30px;
+    text-align: center;
+    border: 3px double black;
+}
+
+.colorcito{
+    background-color: rgb(169, 237, 214);
+}
+
+
+/* Empiezo a maquetar la primer mediacueris que empieza por defecto, hasta marcar la siguiente. */
+    body{
+        background-color: rgb(146, 239, 210);
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+    }
+
+    .foto{
+        max-height: 300px;
+        max-width: 300px;
+        border: solid 4px beige;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    
+    .fiestass{
+        background-color: rgb(188, 246, 250);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 8px;
+    }
+
+header, main{background-color: rgb(146, 239, 210);}
+
+h1{
+    background: rgb(0,193,150);
+background: linear-gradient(69deg, rgba(0,193,150,1) 15%, rgba(0,193,148,1) 37%, rgba(65,200,169,1) 56%, rgba(51,232,192,1) 80%, rgba(80,231,189,1) 100%);
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 50px;
+    color:whitesmoke;
+    padding: 20px;
+    margin: 20px 40px 20px 40px;
+    border: 3px double black
+}
+
+h2{
+    font-family: 'Lobster Two', cursive; 
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    color:rgb(247, 251, 251);
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.en-dientes{
+    background-color: rgb(196, 246, 242);
+    border: solid 2px black;
+    font-style: normal;
+    font-family:'Poppins', sans-serif ;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 8px;
+    padding: 10px;
+}
+
+.clash3{
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.clasparr{
+    font-weight: 500;
+    font-size: 12px;
+}
+.tipoevent{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: rgb(178, 185, 185);
+    margin: 13px;
+    padding: 13px;
+    border: 1px solid rgb(41, 40, 40);
+}
+.niveldefiesta{
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(251, 108, 108, 0.813);
+}
+
+
+
+footer{
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 90px;
+        margin-right: 90px;
+}
+
+article{
+    background-color: aliceblue;
+    margin-top: 10px;
+    
+}
+
+
+/* Declaro mis areas. */
+
+header{
+    grid-area: header;
+}
+
+.imagen-general{
+    grid-area: imagen-general;
+
+}
+
+article{
+    grid-area: article;
+}
+
+footer{
+    grid-area: footer;
+}
+nav{
+    grid-area: nav;
+    margin-bottom: 1,5em;
+}
+.antes-nav{
+    grid-area: antes-nav;
+}
+
+/* empiezo a acomodar mis areas */
+.div-inicio{
+background-color: antiquewhite;
+margin-bottom: 1.5em;
+display: grid;
+grid-template-areas: 
+"header"
+"antes-nav"
+"nav"
+"imagen-general"
+"article"
+"footer";
+}
+
+.img-gen{
+    background-color:rgb(29, 230, 189) ;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+
+
+/* ACA EMPIEZO A DECLARAR LA PRIER MEDIACUERIS */
+
+@media (min-width: 480px){
+
+
+.img-gen{
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header   header"
+    "nav      nav "
+    "imagen-general  imagen-general"
+    "article  article"
+    "footer   footer";
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fiestass{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.foto{
+    border: solid 3px black;
+    max-height: 250px;
+    max-width:  250px;
+}
+}
+
+@media (min-width:768px){
+    
+
+.clas-event, .clas-cont{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+body{
+    background-color:  rgb(146, 239, 210);
+}
+
+    .foto{
+        border: solid 4px white;
+        max-height: 250px;
+    max-width:  250px;
+    }
+
+    
+    .en-dientes{
+        background-color:  rgb(146, 239, 210);
+        background-color: aliceblue;
+        border: double 3px black;
+        margin-left: 170px;
+        margin-right: 170px;
+    }
+.div-gen-evento{
+    background-color: rgb(146, 239, 210);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+    .img-gen{
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header  header  header"
+        "nav     nav    nav "
+        "imagen-general imagen-general imagen-general"
+        "article  article  footer";
+    }
+
+
+    .foto:hover{
+        transform: scale(2);
+        transition-property: all;
+        transition-duration: 2s;
+    }
+
+    .icon--:hover{
+        transform: scale(2);
+        transition-property: all;
+        transition-duration: 2s;
+    }
+
+
+    footer{
+        background-color: rgb(176, 247, 217);
+        margin-top: 20px;
+        margin-left: 120px;
+            margin-right: 120px;
+    }
+}
+
+@media (min-width: 1024px){
+    
+    article, .fiestass{
+        background-color: aliceblue;
+        border: double 3px black;
+        margin-left: 170px;
+        margin-right: 170px;
+        
+    }
+
+    footer{
+        background: rgb(151,228,211);
+background: linear-gradient(45deg, rgba(151,228,211,1) 15%, rgba(106,247,214,1) 37%, rgba(90,235,201,1) 56%, rgba(51,232,192,1) 80%, rgba(49,208,164,1) 100%);
+
+        border: double 3px black;
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+
+    .divfooter{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+
+    li:hover{
+        transform: scale(2);
+        transition: all;
+        transition-duration: 3s;
+    }
+}
